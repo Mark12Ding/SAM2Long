@@ -1,5 +1,52 @@
 # Semi-supervised VOS Inference
 
+This repository contains tools for semi-supervised video object segmentation (VOS) using SAM2. It includes a Gradio web interface for interactive segmentation and a command-line script for batch processing.
+
+## Gradio Web Interface
+
+To run the interactive Gradio web interface:
+
+1. Ensure you have all the required dependencies installed.
+2. Run the following command:
+
+```bash
+python tools/gradio_app.py
+```
+
+3. Open the provided URL in your web browser.
+4. Use the interface to:
+   - Upload a video
+   - Select points on the first frame to indicate the object to track
+   - Process the video to generate a masked output
+
+## Video Inference Script
+
+For batch processing or command-line usage, use the `video_inference.py` script:
+
+```bash
+python tools/video_inference.py \
+  --video_path /path/to/input/video.mp4 \
+  --points 100 150 200 250 \
+  --output_video /path/to/output/video.mp4 \
+  --sam2_cfg configs/sam2.1/sam2.1_hiera_b+.yaml \
+  --sam2_checkpoint ./checkpoints/sam2.1_hiera_base_plus.pt \
+  --num_pathway 3 \
+  --iou_thre 0.1 \
+  --uncertainty 2
+```
+
+Arguments:
+- `--video_path`: Path to the input video file
+- `--points`: List of x,y coordinates for initial points (format: x1 y1 x2 y2 ...)
+- `--output_video`: Path for the output video with mask overlay
+- `--sam2_cfg`: Path to SAM2 config file
+- `--sam2_checkpoint`: Path to SAM2 checkpoint file
+- `--num_pathway`: Number of segmentation pathways (default: 3)
+- `--iou_thre`: IoU threshold for filtering masks (default: 0.1)
+- `--uncertainty`: Uncertainty threshold for mask selection (default: 2)
+
+## Dataset Evaluation
+
 The `vos_inference.py` script can be used to generate predictions for semi-supervised video object segmentation (VOS) evaluation on datasets such as [DAVIS](https://davischallenge.org/index.html),  [LVOS](https://lingyihongfd.github.io/lvos.github.io/), [MOSE](https://henghuiding.github.io/MOSE/) or the SA-V dataset.
 
 After installing SAM 2 and its dependencies, it can be used as follows ([DAVIS 2017 dataset](https://davischallenge.org/davis2017/code.html) as an example). This script saves the prediction PNG files to the `--output_mask_dir`.
