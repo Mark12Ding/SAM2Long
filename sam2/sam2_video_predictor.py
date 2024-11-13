@@ -738,14 +738,18 @@ class SAM2VideoPredictor(SAM2Base):
                     start_frame_idx=start_frame_idx,
                 )
                 output_dict[storage_key][frame_idx] = current_out
-        mask = [self._get_orig_video_res_output(inference_state, output_dict["cond_frame_outputs"][start_frame_idx]["pred_masks"])[1]]
-        for i in range(start_frame_idx+1, num_frames):
-            mask.append(
-                self._get_orig_video_res_output(
-                    inference_state, 
-                    output_dict["non_cond_frame_outputs"][i]["pred_masks"][...,mem_pick_indexs[0][i]])[1]
-                    )
-        return obj_ids, mask
+        for frame_idx in range(start_frame_idx, max_frame_num_to_track):
+            if frame_idx == start_frame_idx:
+                mask = self._get_orig_video_res_output(
+                    inference_state,
+                    output_dict["cond_frame_outputs"][start_frame_idx]["pred_masks"]
+                )[1]
+            else:
+                mask = self._get_orig_video_res_output(
+                    inference_state,
+                    output_dict["non_cond_frame_outputs"][frame_idx]["pred_masks"][..., mem_pick_indexs[0][frame_idx]]
+                )[1]
+            yield frame_idx, obj_ids, mask
 
         # Create slices of per-object outputs for subsequent interaction with each
         # individual object after tracking.
