@@ -26,7 +26,7 @@ https://github.com/user-attachments/assets/265a1f01-ea60-4480-b1d6-ce1b85e48c89
 (More Demos are shown in the [project page](https://mark12ding.github.io/project/SAM2Long/)!)
 
 ## 📰 News
-[2024/6/26]🔥🔥🔥 Aloha! SAM2Long is accepted at ICCV 2025. See you in Hawaii. <br>
+[2025/6/26]🍺🍺🍺 Aloha! SAM2Long is accepted at ICCV 2025. See you in Hawaii. <br>
 [2024/12/18]🔥🔥🔥 We include SAM2Long's performance on VOT benchmarks, Lasot, LaSoText, and GoT10k. Refer to our updated [paper📄](https://arxiv.org/pdf/2410.16268).<br>
 [2024/12/9]🔥🔥🔥 The SAM2Long demo is now live on Hugging Face Spaces 🤗[Link](https://huggingface.co/spaces/Mar2Ding/SAM2Long-Demo). Take a look!
 
