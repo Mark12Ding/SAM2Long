@@ -54,8 +54,8 @@ SAM2Long pushes the performance limits of SAM 2 even further across various vide
 
 ## 🚀 Main Results
 
-### SAM 2.1 checkpoints
-The table below provides a one-to-one comparison between SAM 2 and SAM2Long using the improved SAM 2.1 checkpoints.
+### SAM 2 checkpoints
+The table below provides a one-to-one comparison between SAM 2 and SAM2Long using the improved SAM 2 checkpoints.
 |  Method  | Backbone | SA-V val (J & F) | SA-V test (J & F) | LVOS v2 (J & F) |
 | :------: | :--------: | :------: | :--------: | :--------: |
 |  SAM 2   | Tiny   | 73.5 | 74.6 | 77.8 |
@@ -67,8 +67,8 @@ The table below provides a one-to-one comparison between SAM 2 and SAM2Long usin
 |  SAM 2   | Large   | 76.3 | 75.5 | 83.0 |
 |  SAM2Long| Large   | 80.8 | 80.8 | 85.2 |
 
-### SAM 2 checkpoints
-The table below provides a one-to-one comparison between SAM 2 and SAM2Long using the SAM 2 checkpoints.
+### SAM 2.1 checkpoints
+The table below provides a one-to-one comparison between SAM 2 and SAM2Long using the SAM 2.1 checkpoints.
 
 |  Method  | Backbone | SA-V val (J & F) | SA-V test (J & F) | LVOS v2 (J & F) |
 | :------: | :--------: | :------: | :--------: | :--------: |
