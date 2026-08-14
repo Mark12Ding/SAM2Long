@@ -12,6 +12,8 @@ This repository is the official implementation of SAM2Long.
 <a href="https://mark12ding.github.io/project/SAM2Long/"><img src="https://img.shields.io/badge/Project-Homepage-green"></a>
 <a href="https://mark12ding.github.io/project/SAM2Long/asset/images/paper.pdf"><img src="https://img.shields.io/badge/PDF-red"></a>
 <a href="https://huggingface.co/spaces/Mar2Ding/SAM2Long-Demo"><img src="https://img.shields.io/badge/ðŸ¤—Hugging Demo-yellow"></a>
+[![Papers with Code: #2 on SA-V test](https://paperswithcode.co/api/v1/papers/2410.16268/leaderboard-badge.svg?eval=17867&live=1)](https://paperswithcode.co/benchmark/sa-v-test?task=video-segmentation&eval=17867)
+[![Papers with Code: #2 on SA-V val](https://paperswithcode.co/api/v1/papers/2410.16268/leaderboard-badge.svg?eval=17866&live=1)](https://paperswithcode.co/benchmark/sa-v-val?task=video-segmentation&eval=17866)
 </p>
 
 
@@ -128,5 +130,4 @@ If you find our work helpful for your research, please consider giving a star â­
         year={2024}
       }
 ```
-
 
